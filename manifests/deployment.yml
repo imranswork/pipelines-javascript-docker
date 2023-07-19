@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: imransworkpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: imransworkpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: imransworkpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: imransworkpipelinesjavascriptdocker 
+          image: imrandemoregistry.azurecr.io/imransworkpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
